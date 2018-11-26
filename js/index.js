@@ -33,11 +33,11 @@ function init() {
   renderer.setClearColor(0x17293a);
   renderer.setSize(W, H);
   console.log(message.innerHTML);
-  if (message.innerHTML === 'WEBVR NOT SUPPORTED'){
-    renderer.vr.enabled = false;
-  } else {
+  // if (message.innerHTML === 'WEBVR NOT SUPPORTED'){
+  //   renderer.vr.enabled = false;
+  // } else {
   renderer.vr.enabled = true;
-  }
+  // }
   //renderer.shadowMapEnabled = true;
 
   //create a group container
