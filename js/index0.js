@@ -7,7 +7,7 @@ testInstance === Synth; // true
 
 var piano = Synth.createInstrument('piano');
 
-document.body.appendChild( WEBVR.createButton( renderer ) );
+// document.body.appendChild( WEBVR.createButton( renderer ) );
 
 var renderer, scene, camera;
 var raycaster = new THREE.Raycaster(), INTERSECTED;
@@ -32,12 +32,12 @@ function init() {
   renderer = new THREE.WebGLRenderer({antialias:true});
   renderer.setClearColor(0x17293a);
   renderer.setSize(W, H);
-  console.log(message.innerHTML);
-  if (message.innerHTML === 'WEBVR NOT SUPPORTED'){
-    renderer.vr.enabled = false;
-  } else {
-  renderer.vr.enabled = true;
-  }
+  // console.log(message.innerHTML);
+  // if (message.innerHTML === 'WEBVR NOT SUPPORTED'){
+  //   renderer.vr.enabled = false;
+  // } else {
+  // renderer.vr.enabled = true;
+  // }
   //renderer.shadowMapEnabled = true;
 
   //create a group container
