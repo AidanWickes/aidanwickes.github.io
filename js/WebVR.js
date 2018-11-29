@@ -5,6 +5,8 @@
  * Based on @tojiro's vr-samples-utils.js
  */
 
+ var message;
+
 var WEBVR = {
 
 	createButton: function ( renderer, options ) {
@@ -198,7 +200,7 @@ var WEBVR = {
 
 		} else {
 
-			var message = document.createElement( 'a' );
+			message = document.createElement( 'a' );
 			message.href = 'https://webvr.info';
 			message.innerHTML = 'WEBVR NOT SUPPORTED';
 
