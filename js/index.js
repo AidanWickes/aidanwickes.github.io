@@ -12,6 +12,8 @@ var raycaster = new THREE.Raycaster(), INTERSECTED;
 var mouse = new THREE.Vector2();
 var box;
 
+document.body.appendChild( WEBVR.createButton( renderer ) );
+
 function init() {
   scene = new THREE.Scene();
 
@@ -80,18 +82,6 @@ function init() {
   document.body.appendChild(renderer.domElement);
   document.addEventListener('mousemove', onMouseMove, false);
   document.addEventListener('mousedown', onMouseDown, false);
-}
-
-function getVRDisplays ( onDisplay ) {
-  if ( 'getVRDisplays' in navigator ) {
-    navigator.getVRDisplays()
-    .then( function ( displays ) {
-      onDisplay( displays[ 0 ] );
-      getVRDisplay(function(display) {
-          renderer.vr.setDevice(display);
-      });
-    } );
-  }
 }
 
 function onMouseMove (event){
@@ -195,8 +185,10 @@ function playNote() {
   }
 }
 
-function drawFrame(){
-  requestAnimationFrame(drawFrame);
+init();
+//console.log("what is renderer?", renderer);
+renderer.setAnimationLoop( function drawFrame() {
+  //requestAnimationFrame(drawFrame);
   //update raycaster with mouse movement
     raycaster.setFromCamera(mouse, camera);
     // calculate objects intersecting the picking ray
@@ -215,9 +207,6 @@ function drawFrame(){
         INTERSECTED = null;
     }
   renderer.render(scene, camera);
-}
+});
 
-
-
-init();
 drawFrame();
