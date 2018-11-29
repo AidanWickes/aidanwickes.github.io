@@ -212,5 +212,3 @@ renderer.setAnimationLoop( function drawFrame() {
     }
   renderer.render(scene, camera);
 });
-
-drawFrame();
