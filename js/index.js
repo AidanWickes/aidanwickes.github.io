@@ -31,7 +31,7 @@ function init() {
   renderer = new THREE.WebGLRenderer({antialias:true});
   renderer.setClearColor(0x17293a);
   renderer.setSize(W, H);
-  if (message == "WEBVR NOT SUPPORTED"){
+  if (message.innerHTML == 'WEBVR NOT SUPPORTED'){
     renderer.vr.enabled = false;
   } else {
     renderer.vr.enabled = true;
