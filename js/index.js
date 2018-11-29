@@ -7,15 +7,12 @@ testInstance === Synth; // true
 
 var piano = Synth.createInstrument('piano');
 
-// document.body.appendChild( WEBVR.createButton( renderer ) );
-
 var renderer, scene, camera;
 var raycaster = new THREE.Raycaster(), INTERSECTED;
 var mouse = new THREE.Vector2();
 var box;
 
 function init() {
-  console.log('running init function');
   scene = new THREE.Scene();
 
   var W = window.innerWidth, H = window.innerHeight;
@@ -32,12 +29,7 @@ function init() {
   renderer = new THREE.WebGLRenderer({antialias:true});
   renderer.setClearColor(0x17293a);
   renderer.setSize(W, H);
-  // console.log(message.innerHTML);
-  // if (message.innerHTML === 'WEBVR NOT SUPPORTED'){
-  //   renderer.vr.enabled = false;
-  // } else {
-  // renderer.vr.enabled = true;
-  // }
+  renderer.vr.enabled = true;
   //renderer.shadowMapEnabled = true;
 
   //create a group container
@@ -88,6 +80,18 @@ function init() {
   document.body.appendChild(renderer.domElement);
   document.addEventListener('mousemove', onMouseMove, false);
   document.addEventListener('mousedown', onMouseDown, false);
+}
+
+function getVRDisplays ( onDisplay ) {
+  if ( 'getVRDisplays' in navigator ) {
+    navigator.getVRDisplays()
+    .then( function ( displays ) {
+      onDisplay( displays[ 0 ] );
+      getVRDisplay(function(display) {
+          renderer.vr.setDevice(display);
+      });
+    } );
+  }
 }
 
 function onMouseMove (event){
@@ -191,11 +195,8 @@ function playNote() {
   }
 }
 
-//console.log('what is renderer now?', renderer);
-init();
-renderer.setAnimationLoop( function (){
-  renderer.render(scene, camera);
-  //requestAnimationFrame(drawFrame);
+function drawFrame(){
+  requestAnimationFrame(drawFrame);
   //update raycaster with mouse movement
     raycaster.setFromCamera(mouse, camera);
     // calculate objects intersecting the picking ray
@@ -213,4 +214,10 @@ renderer.setAnimationLoop( function (){
         if (INTERSECTED) INTERSECTED.material.emissive.setHex(INTERSECTED.currentHex);
         INTERSECTED = null;
     }
-});
+  renderer.render(scene, camera);
+}
+
+
+
+init();
+drawFrame();
