@@ -20,7 +20,7 @@ function init() {
   var W = window.innerWidth, H = window.innerHeight;
 
   camera = new THREE.PerspectiveCamera(45, W/H, .1, 1000);
-  camera.position.set(0, 55, 85);
+  camera.position.set(0, 55, 250);
   camera.lookAt(scene.position);
 
   var spotLight = new THREE.SpotLight(0xFFFFFF);
