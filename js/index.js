@@ -82,12 +82,13 @@ function init() {
   document.body.appendChild(renderer.domElement);
   document.addEventListener('mousemove', onMouseMove, false);
   document.addEventListener('mousedown', onMouseDown, false);
-  document.body.appendChild( WEBVR.createButton( renderer ) );
-  if (button.textContent == 'VR NOT FOUND'){
+  if (message.innerHTML == 'WEBVR NOT SUPPORTED'){
     renderer.vr.enabled = false;
   } else {
     renderer.vr.enabled = true;
   }
+  document.body.appendChild( WEBVR.createButton( renderer ) );
+
 }
 
 function onMouseMove (event){
