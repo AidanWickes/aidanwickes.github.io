@@ -1,4 +1,1 @@
-<?php
-include 'index.html';
-echo 'html file loaded'
- ?>
+<?php include_once("index.html"); ?>
