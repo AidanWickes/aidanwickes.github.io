@@ -31,7 +31,7 @@ function init() {
   renderer = new THREE.WebGLRenderer({antialias:true});
   renderer.setClearColor(0x17293a);
   renderer.setSize(W, H);
-  renderer.vr.enabled = true;
+
   //renderer.shadowMapEnabled = true;
 
   //create a group container
@@ -83,6 +83,11 @@ function init() {
   document.addEventListener('mousemove', onMouseMove, false);
   document.addEventListener('mousedown', onMouseDown, false);
   document.body.appendChild( WEBVR.createButton( renderer ) );
+  if (message.innerHTML == 'WEBVR NOT SUPPORTED'){
+    renderer.vr.enabled = false;
+  } else {
+    renderer.vr.enabled = true;
+  }
 }
 
 function onMouseMove (event){
