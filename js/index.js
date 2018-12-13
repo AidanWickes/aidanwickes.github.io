@@ -12,7 +12,7 @@ var raycaster = new THREE.Raycaster(), INTERSECTED;
 var mouse = new THREE.Vector2();
 var box;
 
-document.body.appendChild( WEBVR.createButton( renderer ) );
+//document.body.appendChild( WEBVR.createButton( renderer ) );
 
 function init() {
   scene = new THREE.Scene();
@@ -86,6 +86,7 @@ function init() {
   document.body.appendChild(renderer.domElement);
   document.addEventListener('mousemove', onMouseMove, false);
   document.addEventListener('mousedown', onMouseDown, false);
+  document.body.appendChild( WEBVR.createButton( renderer ) );
 }
 
 function onMouseMove (event){
