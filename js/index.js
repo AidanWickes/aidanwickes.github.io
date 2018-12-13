@@ -79,6 +79,7 @@ function init() {
 
   }
   keysGroup.position.z = -50;
+  keysGroup.position.y = -50;
   scene.add(keysGroup);
   document.body.appendChild(renderer.domElement);
   document.addEventListener('mousemove', onMouseMove, false);
