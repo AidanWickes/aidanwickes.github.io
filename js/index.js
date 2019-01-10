@@ -1,3 +1,4 @@
+//loading AudioSynth framework to work within the javascript file
 Synth instanceof AudioSynth; // true
 
 var testInstance = new AudioSynth;
@@ -7,6 +8,7 @@ testInstance === Synth; // true
 
 var piano = Synth.createInstrument('piano');
 
+//creating global variables that will be used later
 var renderer, scene, camera;
 var raycaster = new THREE.Raycaster(), INTERSECTED;
 var mouse = new THREE.Vector2();
@@ -15,6 +17,7 @@ var box;
 //document.body.appendChild( WEBVR.createButton( renderer ) );
 
 function init() {
+  //creating the scene and all the settings for the rendered project
   scene = new THREE.Scene();
 
   var W = window.innerWidth, H = window.innerHeight;
@@ -37,11 +40,13 @@ function init() {
   //create a group container
   keysGroup = new THREE.Object3D();
 
+  //create arrays for the different colour keys
   var whiteKeys = [];
   var blackKeys = [];
 
   var i = 1;
 
+  //for loop to create all of the white keys and add these to the array and group container referenced above
   for (var x = -70; x <= 65; x += 10) {
     var boxGeometry = new THREE.BoxGeometry(9, 5, 25);
     var boxMaterial = new THREE.MeshLambertMaterial({color: 0xFFFFFF});
@@ -58,6 +63,8 @@ function init() {
   }
 
   var count = 1;
+
+  //for loop to create all of the black keys and add these to the array and group container referenced above
   for (var x = -65; x <= 70; x += 10) {
     if (count % 7 == 0){
       count = 1;
@@ -78,18 +85,25 @@ function init() {
     }
 
   }
+
+  //allows the keyboard to be viewable when in VR mode
   keysGroup.position.z = -50;
   keysGroup.position.y = -50;
+  //add the object group from earlier to the scene
   scene.add(keysGroup);
   document.body.appendChild(renderer.domElement);
+
+  //creating the event listeners to be used later
   document.addEventListener('mousemove', onMouseMove, false);
   document.addEventListener('mousedown', onMouseDown, false);
+
+  //using the WebVR framework to create the button that canges the view between VR and non-VR
   document.body.appendChild( WEBVR.createButton( renderer ) );
 
   renderer.vr.enabled = true;
 
 }
-
+//mouse move event to update the position of the mouse for later use
 function onMouseMove (event){
   mouseX = event.clientX - window.innerWidth / 2;
   mouseY = event.clientY - window.innerHeight / 2;
@@ -99,6 +113,7 @@ function onMouseMove (event){
 
 var keyID;
 
+//detects which key has been pressed and plays the relevant note using the audiosynth framework
 function onMouseDown (){
 
   event.preventDefault();
@@ -114,6 +129,7 @@ function onMouseDown (){
   }
 }
 
+//long switch statement to decide which sound should be played depending on the keyID
 function playNote() {
   switch (keyID){
     case 12:
@@ -191,14 +207,19 @@ function playNote() {
   }
 }
 
+//init function is called so that it occurs before the renderer gets caught in a loop
 init();
+
 //console.log("what is renderer?", renderer);
 renderer.setAnimationLoop( function drawFrame() {
   //requestAnimationFrame(drawFrame);
+
   //update raycaster with mouse movement
     raycaster.setFromCamera(mouse, camera);
+
     // calculate objects intersecting the picking ray
     var intersects = raycaster.intersectObjects(keysGroup.children);
+    
   //count and look after all objects in the keys group
     if (intersects.length > 0) {
         if (INTERSECTED != intersects[0].object) {
