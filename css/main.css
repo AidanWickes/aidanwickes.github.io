@@ -469,7 +469,7 @@ nav {
     position: -webkit-sticky;
     position: sticky;
     z-index: 9;
-
+    background-color: #000000
 }
 
 ul.menu li {
@@ -491,11 +491,11 @@ ul.menu li a.active {
 
 
 @media screen and (min-width: 736px) {
-    
+
     ul.menu li {
         display: inline-block;
     }
-    
+
     ul.menu li a::after {
     content: '';
     display: block;
