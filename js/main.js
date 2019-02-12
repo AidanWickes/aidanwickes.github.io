@@ -4,7 +4,7 @@
 
 jQuery(document).ready(function ($) {
 	$('a[href*=#]:not([href=#])').click(function() {
-		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
 			|| location.hostname == this.hostname) {
 
 			var target = $(this.hash);
@@ -48,4 +48,22 @@ window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+}
+/* sticky navbar -------------------------------------------------------------- */
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
 }
