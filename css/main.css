@@ -469,7 +469,7 @@ nav {
     position: -webkit-sticky;
     position: sticky;
     z-index: 9;
-    background-color: #000000
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 ul.menu li {
