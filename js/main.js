@@ -1,5 +1,25 @@
 /* Javascript Document */
 
+$('.grid').masonry({
+  // options
+  itemSelector: '.grid-item',
+  columnWidth: 200,
+	gutter: 10,
+	fitWidth: true
+});
+
+/*navbar colour change--------------------------------------------------------- */
+	$(function() {
+   $(window).scroll(function () {
+      if ($(this).scrollTop() > 200) {
+         $('nav').addClass('darken')
+      }
+      if ($(this).scrollTop() < 200) {
+         $('nav').removeClass('darken')
+      }
+   });
+});
+
 /*page scroll------------------------------------------------------------------ */
 
 jQuery(document).ready(function ($) {
