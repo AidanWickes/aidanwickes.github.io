@@ -11,10 +11,10 @@ $('.grid').masonry({
 /*navbar colour change--------------------------------------------------------- */
 	$(function() {
    $(window).scroll(function () {
-      if ($(this).scrollTop() > 200) {
+      if ($(this).scrollTop() > 500) {
          $('nav').addClass('darken')
       }
-      if ($(this).scrollTop() < 200) {
+      if ($(this).scrollTop() < 500) {
          $('nav').removeClass('darken')
       }
    });
