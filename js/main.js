@@ -5,8 +5,15 @@ $('.grid').masonry({
   itemSelector: '.grid-item',
   columnWidth: 200,
 	gutter: 10,
-	fitWidth: true
+	fitWidth: true,
+  initLayout: false
 });
+// bind event
+$grid.masonry( 'on', 'layoutComplete', function() {
+  console.log('layout is complete');
+});
+// trigger initial layout
+$grid.masonry();
 
 /*navbar colour change--------------------------------------------------------- */
 	$(function() {
