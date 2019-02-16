@@ -279,7 +279,7 @@ pre code {
 hr {
     border: 0;
     border-bottom: 3px double rgb(255, 255, 255);
-    margin: 2em 0;
+    margin: 2em 2em;
 }
 
 hr.major {
