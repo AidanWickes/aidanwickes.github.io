@@ -6,14 +6,11 @@ $('.grid').masonry({
   columnWidth: 200,
 	gutter: 10,
 	fitWidth: true,
-  initLayout: false
 });
-// bind event
-$grid.masonry( 'on', 'layoutComplete', function() {
-  console.log('layout is complete');
+// layout Masonry after each image loads
+$('.grid').imagesLoaded().progress( function() {
+  $('.grid').masonry('layout');
 });
-// trigger initial layout
-$grid.masonry();
 
 /*navbar colour change--------------------------------------------------------- */
 	$(function() {
