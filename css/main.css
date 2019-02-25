@@ -721,6 +721,10 @@ ul.menu li a.active {
 
 /*about page------------------------------------------------------------------ */
 
+.about{
+  margin: 0 5em;
+}
+
 .about .row .column {
     float: left;
     width: 50%;
