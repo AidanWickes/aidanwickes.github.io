@@ -4,178 +4,180 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <!--character encoding for the document (Unicode) -->
-    <title>Aidan Wickes</title>
-    <!--web page title -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Makes mobile browsers behave like desktop browsers and display the web page full size -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico" rel="stylesheet">
-    <!-- Google Fonts links for my webpage -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- FontAwesome icon library -->
-    <link href="css/default.css" rel="stylesheet" type="text/css">
-    <link href="css/main.css" rel="stylesheet" type="text/css">
-    <link rel="icon" href="img/favicon.png">
-    <!--jQuery for smooth scroll-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <meta charset="UTF-8">
+  <!--character encoding for the document (Unicode) -->
+  <title>Aidan Wickes</title>
+  <!--web page title -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Makes mobile browsers behave like desktop browsers and display the web page full size -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico" rel="stylesheet">
+  <!-- Google Fonts links for my webpage -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- FontAwesome icon library -->
+  <link href="css/default.css" rel="stylesheet" type="text/css">
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+  <link rel="icon" href="img/favicon.png">
+  <!--jQuery for smooth scroll-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 </head>
 
 <body>
-    <div id="wrapper">
-        <!--Header-->
-        <header>
-            <!--Avatar-->
-            <span class="avatar">
-                <img src="img/avatar.jpg" alt="Avatar">
+  <div id="wrapper">
+    <!--Header-->
+    <header>
+      <!--Avatar-->
+      <span class="avatar">
+        <img src="img/avatar.jpg" alt="Avatar">
+      </span>
+      <h1>
+        I am <strong>Aidan Wickes</strong> and I make fun stuff on the internet.
+      </h1>
+      <ul class="icons">
+        <li><a target="_blank" href="https://github.com/AidanWickes" class="icon style2 fa fa-github"><span class="label">Github</span></a></li>
+        <li><a target="_blank" href="https://www.instagram.com/aidanwickes.portfolio/?hl=en" class="icon style2 fa fa-instagram"><span class="label">Instagram</span></a></li>
+        <li><a target="_blank" href="https://www.behance.net/aidanwicke4ff5" class="icon style2 fa fa-behance"><span class="label">Behance</span></a></li>
+        <li><a target="_blank" href="https://www.linkedin.com/in/aidan-wickes-b2b695151/" class="icon style2 fa fa-linkedin"><span class="label">Linkedin</span></a></li>
+        <li><a target="_blank" href="https://codepen.io/AidanWickes/" class="icon style2 fa fa-codepen"><span class="label">Codepen</span></a></li>
+      </ul>
+    </header>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="#about" class="navItem">About</a></li>
+        <li><a href="#portfolio" class="navItem">Portfolio</a></li>
+        <li><a href="#contact" class="navItem">Contact</a></li>
+      </ul>
+    </nav>
+
+    <hr>
+
+    <section id="portfolio">
+      <div class="content">
+        <div class="grid">
+          <div class="grid-item">
+            <span class="image">
+              <img class="modalImage" src="img/artwork/Circular%20Wave%20Animation0129.png" alt="Circular Wave">
             </span>
-            <h1>
-                I am <strong>Aidan Wickes</strong> and I make fun stuff on the internet.
-            </h1>
-            <ul class="icons">
-                <li><a target="_blank" href="https://github.com/AidanWickes" class="icon style2 fa fa-github"><span class="label">Github</span></a></li>
-                <li><a target="_blank" href="https://www.instagram.com/aidanwickes.portfolio/?hl=en" class="icon style2 fa fa-instagram"><span class="label">Instagram</span></a></li>
-                <li><a target="_blank" href="https://www.behance.net/aidanwicke4ff5" class="icon style2 fa fa-behance"><span class="label">Behance</span></a></li>
-                <li><a target="_blank" href="https://www.linkedin.com/in/aidan-wickes-b2b695151/" class="icon style2 fa fa-linkedin"><span class="label">Linkedin</span></a></li>
-                <li><a target="_blank" href="https://codepen.io/AidanWickes/" class="icon style2 fa fa-codepen"><span class="label">Codepen</span></a></li>
-            </ul>
-        </header>
-
-        <nav>
-            <ul class="menu">
-                <li><a href="#about" class="navItem">About</a></li>
-                <li><a href="#portfolio" class="navItem">Portfolio</a></li>
-                <li><a href="#contact" class="navItem">Contact</a></li>
-            </ul>
-        </nav>
-
-        <hr>
-
-        <section id="portfolio">
-        <div class="content">
-            <div class="grid">
-              <div class="grid-item">
-                <span class="image">
-                  <img class="modalImage" src="img/artwork/Circular%20Wave%20Animation0129.png" alt="Circular Wave">
-                </span>
-              </div>
-              <div class="grid-item">
-                <span class="image">
-                  <img class="modalImage" src="img/artwork/Pebble%20Website%20(2).png" alt="Pebble Website Design">
-                </span>
-              </div>
-                <div class="grid-item">
-                  <span class="image">
-                    <img class="modalImage" src="img/artwork/3D%20Plexus.png" alt="3D Plexus">
-                  </span>
-                </div>
-                <div class="grid-item">
-                  <span class="image">
-                    <img class="modalImage" src="img/artwork/Gradient%20Cube%20Cloner0026.png" alt="Gradient Cube Cloner">
-                  </span>
-                </div>
-                <div class="grid-item">
-                  <span class="image">
-                    <img class="modalImage" src="img/artwork/Gradient%20Glossy%20Cloner.png" alt="Gradient Glossy Cloner">
-                  </span>
-                </div>
-                <div class="grid-item">
-                  <span class="image">
-                    <img class="modalImage" src="img/artwork/Lightbox%20Text.png" alt="Lightbox Text">
-                  </span>
-                </div>
-                <div class="grid-item">
-                  <span class="image">
-                    <img class="modalImage" src="img/artwork/Low%20Poly%20Earth%20(EDITED).png" alt="Low Poly Earth">
-                  </span>
-                </div>
-                <div class="grid-item">
-                  <span class="image">
-                    <img class="modalImage" src="img/artwork/Marbled%20Cubes.png" alt="Marbled Cubes">
-                  </span>
-                </div>
-                <div class="grid-item">
-                  <span class="image">
-                    <img class="modalImage" src="img/artwork/Overgrown0027.png" alt="Overgrown">
-                  </span>
-                </div>
-                <div class="grid-item">
-                  <span class="image">
-                    <img class="modalImage" src="img/artwork/Penrose%20Triangle0022.png" alt="Penrose Triangle">
-                  </span>
-                </div>
-                <div class="grid-item">
-                  <span class="image">
-                    <img class="modalImage" src="img/artwork/PolyFX%20Platonic0237.png" alt="PolyFX Platonic">
-                  </span>
-                </div>
-                <div class="grid-item">
-                  <span class="image">
-                    <img class="modalImage" src="img/artwork/Realistic%20Ocean.png" alt="Realistc Ocean Texturing">
-                  </span>
-                </div>
-                <div class="grid-item">
-                  <span class="image">
-                    <img class="modalImage" src="img/artwork/Shattered%20Glass%20Ball.png" alt="Shattered Glass Ball">
-                  </span>
-                </div>
-              </div>
-                <!-- END GRID -->
-
-                <!-- The Modal -->
-                <div id="myModal" class="modal">
-                    <span class="close">x</span>
-                    <img class="modal-content" id="img01">
-                    <div id="caption"></div>
-                </div>
-            </section>
-
-            <hr>
-
-            <section id="about">
-                <div class="about">
-                    <div class="row">
-                        <div class="column">
-                            <h2>I am <em>Aidan Wickes </em>.</h2>
-                            <p>I am currently a second year Internet Design student at the University of Plymouth, and am currently looking for a placement opportunity for 2019/20. During my time at university, I have worked as both an individual and as part of various groups to familiarise myself with a range of development languages to use in my projects, such as HTML, CSS, JavaScript, Java, MySQL, Node.JS, and Three.JS.</p>
-                            <p>Aside from my university education, I also work part-time as a Bartender at the Inn on the Green in Paignton, Devon. In this role, I have acquired excellent communication, teamwork, and time management skills as well as superb customer service skills.</p>
-                            <p>In my spare time, I enjoy improving my artistic skills and creativity by using 3D animation software such as Cinema 4D. I also enjoy improving my talents on guitar by teaching myself how to play songs.</p>
-                        </div>
-                        <div class="column">
-                            <h2>Experience and Skills<em></em></h2>
-                            <p>I write code in HTML, CSS, JavaScript, PHP, MySQL, Python and Java. I have knowledge of Computer Networks including IEEE standards and protocols.</p>
-                            <p>I&#39;m a proficient user of many design and development tools like Bootstrap, Chrome and Firefox development tools, Adobe Creative Suite, Cinema 4D, and Arduino.</p>
-                            <p>Specific expertise include:</p>
-                            <ul>
-                              <li>HTML, CSS, and Javascript  responsive, multi-platform web development</li>
-                              <li>Some knowledge of C# and C++ software development</li>
-                              <li>Java application development experience</li>
-                              <li>Web Server scripting knowledge, including C# and ASP.NET</li>
-                              <li>Knowledge of Computer Networks including IEEE standards and protocols</li>
-                              <li>Strong artistic design -- from a background of 3D Animation (Cinema 4D), 2D animation and image manipulation (Adobe Photoshop, After Effects and Premiere Pro), and web development</li>
-                              <li>Impressive interpersonal and communicative skills</li>
-                              <li>Ability to learn and adapt to new procedures quickly and efficiently</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <hr>
-
-            <section id="contact">
-                <form id="mailer" role="form" action="php/contact.php" method="post">
-                    <input name="name" type="text" class="feedback-input" placeholder="Name" tabindex="1" />
-                    <input name="email" type="text" class="feedback-input" placeholder="Email" tabindex="2" />
-                    <textarea name="text" class="feedback-input" placeholder="Comment" tabindex="3"></textarea>
-                    <input type="submit" value="SUBMIT" tabindex="4" />
-                </form>
-            </section>
+          </div>
+          <div class="grid-item">
+            <span class="image">
+              <img class="modalImage" src="img/artwork/Pebble%20Website%20(2).png" alt="Pebble Website Design">
+            </span>
+          </div>
+          <div class="grid-item">
+            <span class="image">
+              <img class="modalImage" src="img/artwork/3D%20Plexus.png" alt="3D Plexus">
+            </span>
+          </div>
+          <div class="grid-item">
+            <span class="image">
+              <img class="modalImage" src="img/artwork/Gradient%20Cube%20Cloner0026.png" alt="Gradient Cube Cloner">
+            </span>
+          </div>
+          <div class="grid-item">
+            <span class="image">
+              <img class="modalImage" src="img/artwork/Gradient%20Glossy%20Cloner.png" alt="Gradient Glossy Cloner">
+            </span>
+          </div>
+          <div class="grid-item">
+            <span class="image">
+              <img class="modalImage" src="img/artwork/Lightbox%20Text.png" alt="Lightbox Text">
+            </span>
+          </div>
+          <div class="grid-item">
+            <span class="image">
+              <img class="modalImage" src="img/artwork/Low%20Poly%20Earth%20(EDITED).png" alt="Low Poly Earth">
+            </span>
+          </div>
+          <div class="grid-item">
+            <span class="image">
+              <img class="modalImage" src="img/artwork/Marbled%20Cubes.png" alt="Marbled Cubes">
+            </span>
+          </div>
+          <div class="grid-item">
+            <span class="image">
+              <img class="modalImage" src="img/artwork/Overgrown0027.png" alt="Overgrown">
+            </span>
+          </div>
+          <div class="grid-item">
+            <span class="image">
+              <img class="modalImage" src="img/artwork/Penrose%20Triangle0022.png" alt="Penrose Triangle">
+            </span>
+          </div>
+          <div class="grid-item">
+            <span class="image">
+              <img class="modalImage" src="img/artwork/PolyFX%20Platonic0237.png" alt="PolyFX Platonic">
+            </span>
+          </div>
+          <div class="grid-item">
+            <span class="image">
+              <img class="modalImage" src="img/artwork/Realistic%20Ocean.png" alt="Realistc Ocean Texturing">
+            </span>
+          </div>
+          <div class="grid-item">
+            <span class="image">
+              <img class="modalImage" src="img/artwork/Shattered%20Glass%20Ball.png" alt="Shattered Glass Ball">
+            </span>
+          </div>
         </div>
-    </div>
-    <script src="js/main.js"></script>
+        <!-- END GRID -->
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <span class="close">x</span>
+          <img class="modal-content" id="img01">
+          <div id="caption"></div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="about">
+      <div class="about">
+        <div class="row">
+          <div class="column">
+            <h2>I am <em>Aidan Wickes </em>.</h2>
+            <p>I am currently a second year Internet Design student at the University of Plymouth, and am currently looking for a placement opportunity for 2019/20. During my time at university, I have worked as both an individual and as part of
+              various groups to familiarise myself with a range of development languages to use in my projects, such as HTML, CSS, JavaScript, Java, MySQL, Node.JS, and Three.JS.</p>
+            <p>Aside from my university education, I also work part-time as a Bartender at the Inn on the Green in Paignton, Devon. In this role, I have acquired excellent communication, teamwork, and time management skills as well as superb
+              customer service skills.</p>
+            <p>In my spare time, I enjoy improving my artistic skills and creativity by using 3D animation software such as Cinema 4D. I also enjoy improving my talents on guitar by teaching myself how to play songs.</p>
+          </div>
+          <div class="column">
+            <h2>Experience and Skills<em></em></h2>
+            <p>I write code in HTML, CSS, JavaScript, PHP, MySQL, Python and Java. I have knowledge of Computer Networks including IEEE standards and protocols.</p>
+            <p>I&#39;m a proficient user of many design and development tools like Bootstrap, Chrome and Firefox development tools, Adobe Creative Suite, Cinema 4D, and Arduino.</p>
+            <p>Specific expertise include:</p>
+            <ul>
+              <li>HTML, CSS, and Javascript responsive, multi-platform web development</li>
+              <li>Some knowledge of C# and C++ software development</li>
+              <li>Java application development experience</li>
+              <li>Web Server scripting knowledge, including C# and ASP.NET</li>
+              <li>Knowledge of Computer Networks including IEEE standards and protocols</li>
+              <li>Strong artistic design -- from a background of 3D Animation (Cinema 4D), 2D animation and image manipulation (Adobe Photoshop, After Effects and Premiere Pro), and web development</li>
+              <li>Impressive interpersonal and communicative skills</li>
+              <li>Ability to learn and adapt to new procedures quickly and efficiently</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section id="contact">
+      <form id="mailer" role="form" action="https://formspree.io/email@domain.tld" method="post">
+        <input name="name" type="text" class="feedback-input" placeholder="Name" tabindex="1" />
+        <input name="email" type="text" class="feedback-input" placeholder="Email" tabindex="2" />
+        <textarea name="text" type="text" class="feedback-input" placeholder="Comment" tabindex="3"></textarea>
+        <input type="submit" value="SUBMIT" tabindex="4" />
+      </form>
+    </section>
+  </div>
+  </div>
+  <script src="js/main.js"></script>
 </body>
 
 
