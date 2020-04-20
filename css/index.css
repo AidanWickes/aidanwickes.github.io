@@ -1,0 +1,440 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Montserrat";
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  opacity: 1;
+  filter: none;
+  -moz-transition: opacity 1s ease, -moz-filter 1s ease;
+  -webkit-transition: opacity 1s ease, -webkit-filter 1s ease;
+  -ms-transition: opacity 1s ease, -ms-filter 1s ease;
+  transition: opacity 1s ease, filter 1s ease;
+  background-image: url("../img/synthwave_background.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: #e0e0e0;
+}
+
+ul {
+  list-style: none;
+}
+
+.section {
+  padding-top: 100px;
+  min-height: 100vh;
+}
+
+.content {
+  padding: 50px 2em 0 2em;
+}
+
+/* navbar ------------------------------------------------------------------------*/
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+
+  overflow: hidden;
+  z-index: 1000;
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  width: calc(100% / 3);
+  text-align: center; /* If you want the text to be centered */
+  transition: 0.3s;
+  line-height: 25px;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60073, 0 0 20px #e60073,
+    0 0 25px #e60073, 0 0 30px #e60073, 0 0 35px #e60073;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.navbar .icon {
+  display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .navbar a {
+    display: none;
+    text-align: center;
+    width: 100%;
+  }
+  .navbar a.icon {
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .navbar.responsive {
+    position: relative;
+  }
+  .navbar.responsive a {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* home/section 1---------------------------------------------------------------------- */
+#section1 {
+  text-align: center;
+}
+
+.sun {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-color: yellow;
+  background-image: linear-gradient(red, yellow), linear-gradient(black, white);
+  clip-path: polygon(
+    -50% 0px,
+    150% -50%,
+    150% 55%,
+    -50% 55%,
+    -50% 62%,
+    150% 62%,
+    150% 70%,
+    0 70%,
+    -50% 75%,
+    150% 75%,
+    150% 80%,
+    0 80%,
+    -50% 82%,
+    150% 82%,
+    150% 85%,
+    0 85%,
+    -50% 87%,
+    150% 87%,
+    150% 90%,
+    0 90%,
+    -50% 92%,
+    150% 92%,
+    150% 95%,
+    0 95%,
+    -50% 96%,
+    150% 96%,
+    150% 150%,
+    0 150%
+  );
+  box-shadow: rgba(255, 128, 0, 0.7) 0px 0 20px;
+}
+
+/*icons----------------------------------------------------------------------- */
+
+.icons {
+  width: 100%;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.icons a {
+  margin: 0 10px;
+  padding: 10px 0;
+  width: 100px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.icons a:hover {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60073, 0 0 20px #e60073,
+    0 0 25px #e60073, 0 0 30px #e60073, 0 0 35px #e60073;
+}
+
+/*title----------------------------------------------------------------------- */
+
+.text {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+h1.chrome {
+  font-size: 10vh;
+}
+.chrome {
+  font-weight: 900;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    #2989cc 0%,
+    #d3e5ec 50%,
+    #592451 51%,
+    #b3628d 55%,
+    #592451 59%,
+    #b3628d 65%,
+    #ac86a6 75%,
+    #b3628d 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
+}
+
+.glow {
+  font-family: "Crimson Text";
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073,
+    0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+}
+
+/*section2/work-------------------------------------------------------------- */
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#gallery img {
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  transform: scale(1);
+  transition: transform 0.4s ease;
+}
+
+.img-box {
+  box-sizing: content-box;
+  height: auto;
+  width: calc(100% / 3);
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+}
+
+.caption {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.caption p {
+  color: #e0e0e0;
+}
+
+.transparent-box {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s ease;
+}
+
+.img-box:hover img {
+  transform: scale(1.1);
+}
+
+.img-box:hover .transparent-box {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.img-box:hover .caption {
+  transform: translateY(-20px);
+  opacity: 1;
+}
+
+.img-box:hover {
+  cursor: pointer;
+}
+
+.opacity-low {
+  opacity: 0.5;
+  font-size: 0.8em;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .img-box {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .img-box {
+    width: 100%;
+  }
+}
+
+/*section3/about------------------------------------------------------------- */
+
+.column {
+  float: left;
+  padding: 16px;
+}
+
+.intro {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2%;
+  padding: 5px 0 5px 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+}
+
+.intro .avatar {
+  height: auto;
+  width: 100px;
+}
+
+.half {
+  width: 49%;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+}
+
+.half + .half {
+  margin-left: 2%;
+}
+
+.skills {
+  display: grid;
+  grid: auto / auto auto auto;
+  column-gap: 10px;
+}
+
+/* Style the counter cards */
+.card {
+  padding: 16px;
+  text-align: center;
+}
+
+.skills .card i {
+  font-size: 32px;
+}
+
+@media screen and (max-width: 1200px) {
+  .skills {
+    grid: auto / auto auto;
+  }
+  .card {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .skills {
+    grid: auto / auto;
+  }
+}
+/*section4/contact----------------------------------------------------------- */
+form {
+  max-width: 500px;
+  margin: 50px auto;
+}
+
+.feedback-input {
+  margin-bottom: 15px;
+  border: 0;
+  border-radius: 5px;
+  padding: 13px;
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 22px;
+  font-size: 18px;
+  outline: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  transition: all 0.25s;
+}
+
+.feedback-input:focus {
+  color: #0e0e0e;
+  background-color: #fefefe;
+}
+
+textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px;
+  width: 25%;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 900;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border: 0;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.button span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: -2px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
