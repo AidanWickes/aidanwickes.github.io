@@ -17,7 +17,6 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
-  background-color: #e0e0e0;
   line-height: 1.5;
   background-color: #ffffff;
   background-image: url("../img/synthwave_background.jpg");
@@ -203,7 +202,7 @@ section {
   transform: scale(1);
   transition: transform 0.4s ease;
   object-fit: cover;
-  border: 0;
+  border: 1px solid #e60073;
   border-radius: 5px;
 }
 
