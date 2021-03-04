@@ -4,7 +4,7 @@
     <!--character encoding for the document (Unicode) -->
     <meta charset="UTF-8" />
     <!--web page title -->
-    <title>Aidan Wickes</title>
+    <title>I AM Aidan Wickes</title>
     <!-- Makes mobile browsers behave like desktop browsers and display the web page full size -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- FontAwesome icon library -->
@@ -15,7 +15,6 @@
     <!-- My own stylesheets and customisations -->
     <link rel="stylesheet" href="css/normalize.css" type="text/css" />
     <link rel="stylesheet" href="css/index.css" type="text/css" />
-    <link rel="icon" href="" />
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Crimson+Text|Montserrat:400,900&display=swap"
@@ -25,167 +24,139 @@
 
   <body>
     <nav class="navbar" id="navbar">
-      <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
-        <i id="icon" class="fa fa-bars"></i>
-      </a>
-      <a class="chrome" href="#section2">MY PROJECTS</a>
-      <a class="chrome" href="#section3">WHO AM I?</a>
-      <a class="chrome" href="#section4">CONTACT ME</a>
+      <a href="#projects">MY PROJECTS</a>
+      <a href="#about">WHO AM I?</a>
+      <a href="#contact">CONTACT ME</a>
     </nav>
-    <!--section 1 -->
-    <section id="section1" class="section home">
-      <!--avatar-->
-      <div class="sun"></div>
-      <h1 class="chrome">Aidan Wickes</h1>
-      <h2 class="outrun glow">WEB DEVELOPER</h2>
-      <div class="icons">
-        <a target="_blank" href="https://github.com/AidanWickes">
-          <i class="fa fa-github"></i>
-        </a>
-        <a
-          target="_blank"
-          href="https://www.instagram.com/aidanwickes.portfolio/?hl=en"
-          ><i class="fa fa-instagram"></i
-        ></a>
-        <a target="_blank" href="https://www.behance.net/aidanwicke4ff5"
-          ><i class="fa fa-dribbble"></i
-        ></a>
-        <a target="_blank" href="https://codepen.io/AidanWickes/"
-          ><i class="fa fa-codepen"></i
-        ></a>
-      </div>
-    </section>
 
-    <section id="section2" class="section content">
-      <h1>My Projects</h1>
-      <div id="gallery">
-        <div class="img-box">
-          <img src="img/cinema4d/GSG_Metaball_Cage.png" alt="" />
-          <div class="transparent-box">
-            <div class="caption">
-              <p>Caged Metaball</p>
-              <p class="opacity-low">Cinema 4D</p>
-            </div>
-          </div>
-        </div>
-        <div class="img-box">
-          <img src="img/cinema4d/House_Scene.png" alt="" />
-          <div class="transparent-box">
-            <div class="caption">
-              <p>House</p>
-              <p class="opacity-low">Cinema 4D</p>
-            </div>
-          </div>
-        </div>
-        <div class="img-box">
-          <img src="img/cinema4d/Shattered_Glass_Ball.png" alt="" />
-          <div class="transparent-box">
-            <div class="caption">
-              <p>Shattered Glass Ball</p>
-              <p class="opacity-low">Cinema 4D</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div id="wrapper">
+      <!--section 1 -->
+      <section id="home">
+        <!--avatar-->
+        <div class="sun"></div>
+        <h1 class="chrome title">Aidan Wickes</h1>
+        <h2 class="outrun glow">WEB DEVELOPER</h2>
+      </section>
 
-    <section id="section3" class="section content">
-      <h1>Who am I?</h1>
-      <div class="row">
-        <div class="column intro">
-          <img class="avatar" src="img/SVG/avatar.svg" />
-          <p>I am <em>Aidan Wickes</em> and I am a web developer</p>
-        </div>
-        <div class="column half">
-          <h2>About Me</h2>
-          <p>
-            I am currently a third-year Internet Design student at the
-            University of Plymouth. During my time at university, I have worked
-            as both an individual and as part of various groups to familiarise
-            myself with a range of development languages to use in my projects.
-            I pride myself on a deep knowledge of necessary technologies as well
-            as a creative approach to hobbies to widen my strength as a
-            developer.
-          </p>
-        </div>
-        <div class="column half">
-          <h2>Skills and Experience</h2>
-          <div class="skills">
-            <div class="card">
-              <i class="fas fa-pencil-ruler"></i>
-              <h3>Design</h3>
-              <ul>
-                <li>Adobe Creative Suite</li>
-                <li>Cinema 4D & Blender</li>
-                <li>Figma & Sketch</li>
-                <li>Cavalry</li>
-              </ul>
+      <section id="projects">
+        <h1>My Projects</h1>
+        <div id="gallery">
+          <a class="img-box" href="https://github.com/AidanWickes/etu">
+            <img src="img/projects/etu.jpg" alt="" />
+            <div class="transparent-box">
+              <div class="caption">
+                <p>Etu</p>
+                <p class="opacity-low">Flutter Application</p>
+              </div>
             </div>
-            <div class="card">
-              <i class="fab fa-html5"></i>
-              <i class="fab fa-css3"></i>
-              <i class="fab fa-js"></i>
-              <h3>Web Development</h3>
-              <ul>
-                <li>HTML & Pug</li>
-                <li>CSS & Sass</li>
-                <li>Javascript & jQuery</li>
-                <li>Ionic</li>
-              </ul>
+          </a>
+          <div class="img-box">
+            <img src="img/image-placeholder-1200x800.jpg" alt="" />
+            <div class="transparent-box">
+              <div class="caption">
+                <p>Guitar.io</p>
+                <p class="opacity-low">Guitar Teaching Web App</p>
+              </div>
             </div>
-            <div class="card">
-              <i class="fas fa-terminal"></i>
-              <i class="fas fa-server"></i>
-              <h3>Other Specialties</h3>
-              <ul>
-                <li>SQL Server & DBMS</li>
-                <li>Java</li>
-                <li>Cinema 4D</li>
-                <li>Linux Debian & Ubuntu Server</li>
-              </ul>
+          </div>
+          <div class="img-box">
+            <img src="img/image-placeholder-1200x800.jpg" alt="" />
+            <div class="transparent-box">
+              <div class="caption">
+                <p>UI Components</p>
+                <p class="opacity-low">HTML & CSS UI Design</p>
+              </div>
+            </div>
+          </div>
+          <div class="img-box">
+            <img src="img/projects/artwork/GSG_Metaball_Cage.png" alt="" />
+            <div class="transparent-box">
+              <div class="caption">
+                <p>Artwork</p>
+                <p class="opacity-low">Cinema 4D & Photoshop</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="section4" class="section content">
-      <h1>Contact Me</h1>
-      <form
-        id="mailer"
-        role="form"
-        action="https://formspree.io/aidan.wickes@gmail.com"
-        method="post"
-      >
-        <label for="name">Name: </label><br />
-        <input
-          name="name"
-          type="text"
-          class="feedback-input"
-          placeholder="John Smith"
-          tabindex="1"
-        />
-        <label for="_replyto">Email Address: </label><br />
-        <input
-          name="_replyto"
-          type="text"
-          class="feedback-input"
-          placeholder="john.smith@email.com"
-          tabindex="2"
-        />
-        <label for="message">Message: </label><br />
-        <textarea
-          name="message"
-          type="text"
-          class="feedback-input"
-          placeholder="Hi, nice to meet you!"
-          tabindex="3"
-        ></textarea>
-        <button class="button" type="submit">
-          <span>SEND </span>
-        </button>
-      </form>
-    </section>
+      <section id="about">
+        <h1>Who am I?</h1>
+        <div class="flex-grid">
+          <div class="col">
+            <i class="fas fa-pencil-ruler"></i>
+            <h3>Design</h3>
+            <ul>
+              <li>Adobe Creative Suite</li>
+              <li>Cinema 4D & Blender</li>
+              <li>Figma & Sketch</li>
+              <li>Cavalry</li>
+            </ul>
+          </div>
+          <div class="col">
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3"></i>
+            <i class="fab fa-js"></i>
+            <h3>Web Development</h3>
+            <ul>
+              <li>HTML & Pug</li>
+              <li>CSS & Sass</li>
+              <li>Javascript & jQuery</li>
+              <li>Ionic</li>
+            </ul>
+          </div>
+          <div class="col">
+            <i class="fas fa-terminal"></i>
+            <i class="fas fa-server"></i>
+            <h3>Other Specialties</h3>
+            <ul>
+              <li>SQL Server & DBMS</li>
+              <li>Java</li>
+              <li>Cinema 4D</li>
+              <li>Linux Debian & Ubuntu Server</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h1>Contact Me</h1>
+        <form
+          id="mailer"
+          role="form"
+          action="https://formspree.io/aidan.wickes@gmail.com"
+          method="post"
+        >
+          <label for="name">Name: </label><br />
+          <input
+            name="name"
+            type="text"
+            class="feedback-input"
+            placeholder="Who are you?"
+            tabindex="1"
+          />
+          <label for="_replyto">Email Address: </label><br />
+          <input
+            name="_replyto"
+            type="text"
+            class="feedback-input"
+            placeholder="How can I contact you?"
+            tabindex="2"
+          />
+          <label for="message">Message: </label><br />
+          <textarea
+            name="message"
+            type="text"
+            class="feedback-input"
+            placeholder="What would you like to say?"
+            tabindex="3"
+          ></textarea>
+          <button class="button" type="submit">
+            <span class="chrome">SEND</span>
+          </button>
+        </form>
+      </section>
+    </div>
     <script src="js/index.js"></script>
   </body>
 </html>
