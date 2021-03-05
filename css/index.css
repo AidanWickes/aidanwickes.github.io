@@ -34,6 +34,59 @@ strong {
   border-radius: 5px;
 }
 
+/* navbar ------------------------------------------------------------------------*/
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid #e60073;
+  overflow: hidden;
+  z-index: 1000;
+  text-align: center;
+}
+
+/* Style the links inside the navigation bar */
+#navbar span,
+a {
+  transition: 0.3s;
+}
+
+/* Change the color of links on hover */
+#navbar span:hover,
+a:hover {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60073, 0 0 20px #e60073,
+    0 0 25px #e60073, 0 0 30px #e60073, 0 0 35px #e60073;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: none;
+}
+
+.nav-list > li {
+  margin: 15px auto;
+}
+
+.navbar-toggle {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.active {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-list {
+    display: flex;
+  }
+  .navbar-toggle {
+    display: none;
+  }
+}
+
 /*wrapper---------------------------------------------------------------------- */
 #wrapper {
   width: 100%;
@@ -43,37 +96,6 @@ strong {
 
 section {
   padding-top: 50px;
-}
-
-/* navbar ------------------------------------------------------------------------*/
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-  border-bottom: 1px solid #e60073;
-  overflow: hidden;
-  z-index: 1000;
-}
-
-/* Style the links inside the navigation bar */
-.navbar a {
-  float: left;
-  display: block;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  width: calc(100% / 3);
-  text-align: center; /* If you want the text to be centered */
-  transition: 0.3s;
-  line-height: 25px;
-}
-
-/* Change the color of links on hover */
-.navbar a:hover {
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60073, 0 0 20px #e60073,
-    0 0 25px #e60073, 0 0 30px #e60073, 0 0 35px #e60073;
 }
 
 /* home/section 1---------------------------------------------------------------------- */
@@ -246,16 +268,9 @@ section {
   font-size: 0.8em;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 900px) {
-  .img-box {
-    width: 50%;
-  }
-}
-
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-  .img-box {
+  #gallery > .img-box {
     width: 100%;
   }
 }
@@ -263,11 +278,7 @@ section {
 /*section3/about------------------------------------------------------------- */
 .flex-grid {
   display: flex;
-  justify-content: space-between;
-}
-
-.flex-grid > .col {
-  width: 32%;
+  justify-content: space-around;
 }
 
 @media (max-width: 400px) {
@@ -325,8 +336,8 @@ form > textarea {
   padding: 10px;
   cursor: pointer;
   font-size: 24px;
-  font-weight: 900;
   text-align: center;
+  color: #fff;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
   border: 1px solid #e60073;

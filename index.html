@@ -24,9 +24,14 @@
 
   <body>
     <nav class="navbar" id="navbar">
-      <a href="#projects">MY PROJECTS</a>
-      <a href="#about">WHO AM I?</a>
-      <a href="#contact">CONTACT ME</a>
+      <span class="navbar-toggle" id="js-navbar-toggle">
+        <i class="fas fa-bars" id="nav-icon"></i>
+      </span>
+      <ul class="nav-list" id="js-menu">
+        <li><a href="#projects" class="nav-link">MY PROJECTS</a></li>
+        <li><a href="#about" class="nav-link">WHO AM I?</a></li>
+        <li><a href="#contact" class="nav-link">CONTACT ME</a></li>
+      </ul>
     </nav>
 
     <div id="wrapper">
@@ -152,7 +157,7 @@
             tabindex="3"
           ></textarea>
           <button class="button" type="submit">
-            <span class="chrome">SEND</span>
+            <span>SEND</span>
           </button>
         </form>
       </section>
