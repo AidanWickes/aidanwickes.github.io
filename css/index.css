@@ -102,6 +102,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   align-content: center;
+  z-index: 999;
 }
 .github > a {
   font-size: 35px;
