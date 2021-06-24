@@ -326,6 +326,10 @@ section {
   font-size: 32px;
 }
 
+.ul-list-none {
+  list-style-type: none;
+}
+
 @media screen and (max-width: 600px) {
   .flex-grid {
     display: block;
